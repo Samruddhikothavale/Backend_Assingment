@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 require("dotenv").config();
 
-const API_BASE = `${import.meta.env.VITE_SERVER_URL}/task/dashboard`;
+const API_BASE = `${import.meta.env.VITE_SERVER_URL}/tasks/dashboard`;
 
 const Dashboard = () => {
     const navigate = useNavigate();
