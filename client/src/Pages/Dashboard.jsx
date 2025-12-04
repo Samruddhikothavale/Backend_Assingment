@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+require("dotenv").config();
 
-const API_BASE = "http://localhost:5000/tasks";
+const API_BASE = `${process.env.SERVER_URL}`;
 
 const Dashboard = () => {
     const navigate = useNavigate();
