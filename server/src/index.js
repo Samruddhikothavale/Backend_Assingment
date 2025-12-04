@@ -6,7 +6,10 @@ const taskRoute=require("./routes/taskRoute");
 const connectDB = require("./config/db");
 const cors = require("cors");
 
-
+app.use(cors({
+    origin: "https://your-frontend.onrender.com",
+    credentials: true
+}));
 app.use(express.json());
 app.use(cors());
 connectDB();
