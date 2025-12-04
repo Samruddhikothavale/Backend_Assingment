@@ -25,7 +25,7 @@ const Register = () => {
             return;
         }
         try {
-            const response = await fetch(`${process.env.SERVER_URL}/auth/register`, {
+            const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/auth/login`, {
                 method: "POST",
                 headers: {
                     'Content-Type': "application/json"
