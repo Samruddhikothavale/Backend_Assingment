@@ -25,7 +25,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`${process.env.SERVER_URL}/auth/login`, {
+            const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/auth/login`, {
 
                 method: "POST",
                 headers: {
