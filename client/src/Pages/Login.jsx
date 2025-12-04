@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+require("dotenv").config();
 
 
 const Login = () => {
@@ -24,7 +25,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:5000/auth/login`, {
+            const response = await fetch(`${process.env.SERVER_URL}, {
                 method: "POST",
                 headers: {
                     'Content-Type': "application/json"
