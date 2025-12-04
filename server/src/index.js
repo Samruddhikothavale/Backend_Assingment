@@ -7,7 +7,7 @@ const connectDB = require("./config/db");
 const cors = require("cors");
 
 app.use(cors({
-    origin: "https://your-frontend.onrender.com",
+    origin: "https://backend-dveloper-intern-assingment.onrender.com",
     credentials: true
 }));
 app.use(express.json());
