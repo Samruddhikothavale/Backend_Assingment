@@ -25,7 +25,8 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`${process.env.SERVER_URL}, {
+            const response = await fetch(`${process.env.SERVER_URL}/auth/login`, {
+
                 method: "POST",
                 headers: {
                     'Content-Type': "application/json"
