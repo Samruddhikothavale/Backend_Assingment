@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+require("dotenv").config();
 
 const Register = () => {
     const [user, setUser] = useState({
@@ -24,7 +25,7 @@ const Register = () => {
             return;
         }
         try {
-            const response = await fetch(`http://localhost:5000/auth/register`, {
+            const response = await fetch(`${process.env.SERVER_URL}/auth/register`, {
                 method: "POST",
                 headers: {
                     'Content-Type': "application/json"
